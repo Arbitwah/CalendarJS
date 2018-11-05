@@ -29,7 +29,7 @@ _.forEach(Array.from(year.by('months')), month => {
    
         let paddedDays = _.map(days, day => { // Transforms items in the array
         
-            let date = ' ' // TODO: Change this to output a two-digit date use day.format()
+            let date = day.format('DD') // TODO: Change this to output a two-digit date use day.format()
             
             // TODO: Highlight September 10th in color         
             // TODO: Highlight YOUR birthday in color!
@@ -37,7 +37,9 @@ _.forEach(Array.from(year.by('months')), month => {
                     date = chalk.bgRed(date)
                     
                 }//my birthday
-                
+                if(day.month() == 6 && day.date() == 11) {
+                    date = chalk.bgRed(date)
+                }
                 
 
                 return _.padEnd(date, 2)  
@@ -45,7 +47,9 @@ _.forEach(Array.from(year.by('months')), month => {
     
         
             //TODO: create a for() loopthat loops through month.day()
+            for(let i =0; i < month.length;i++)           
             {
+                paddedDays.unshift(' ')
                 //TODO: Append blank spaces (using paddedDays.unshift('  ')) so that the 1st ends up under the right day column 
             }
             
@@ -59,9 +63,10 @@ _.forEach(Array.from(year.by('months')), month => {
         
             paddedDays.forEach(week => { //[ , , , 01, 02]
             
+                week.join(days)
                 // TODO: Join the days together to form one string representing the week
                 // TODO: console.log it use week.join('  ')
-                console.log()
+                console.log(week.join(' '))
             })
         
         console.log('') // Puts a blank line between each month
