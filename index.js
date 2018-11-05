@@ -49,7 +49,7 @@ _.forEach(Array.from(year.by('months')), month => {
             //TODO: create a for() loopthat loops through month.day()
             for(let i =0; i < month.length;i++)           
             {
-                paddedDays.unshift(' ')
+                paddedDays.unshift('  ')
                 //TODO: Append blank spaces (using paddedDays.unshift('  ')) so that the 1st ends up under the right day column 
             }
             
