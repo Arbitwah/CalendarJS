@@ -33,7 +33,7 @@ _.forEach(Array.from(year.by('months')), month => {
             
             // TODO: Highlight September 10th in color         
             // TODO: Highlight YOUR birthday in color!
-                if(day.month() == 0 && day.date() == 19) {
+                if(day.month() == 8 && day.date() == 10) {
                     date = chalk.bgRed(date)
                     
                 }//my birthday
@@ -47,7 +47,7 @@ _.forEach(Array.from(year.by('months')), month => {
     
         
             //TODO: create a for() loopthat loops through month.day()
-            for(let i =0; i < month.length;i++)           
+            for(let i =0; i < month.day();i++)           
             {
                 paddedDays.unshift('  ')
                 //TODO: Append blank spaces (using paddedDays.unshift('  ')) so that the 1st ends up under the right day column 
