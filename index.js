@@ -29,18 +29,14 @@ _.forEach(Array.from(year.by('months')), month => {
    
         let paddedDays = _.map(days, day => { // Transforms items in the array
         
-            let date = day.format('MM/DD') // TODO: Change this to output a two-digit date use day.format()
+            let date = ' ' // TODO: Change this to output a two-digit date use day.format()
             
             // TODO: Highlight September 10th in color         
             // TODO: Highlight YOUR birthday in color!
-                if(day.month() == 7 && day.date() == 11) {
+                if(day.month() == 0 && day.date() == 19) {
                     date = chalk.bgRed(date)
                     
                 }//my birthday
-
-                if(day.month()==9 && day.date()==10){
-                    date = chalk.bgRed(date)
-                }// September 10th 
                 
                 
 
@@ -50,9 +46,6 @@ _.forEach(Array.from(year.by('months')), month => {
         
             //TODO: create a for() loopthat loops through month.day()
             {
-                for(let i = 0;i <month.day.length;i++){
-                    
-                }
                 //TODO: Append blank spaces (using paddedDays.unshift('  ')) so that the 1st ends up under the right day column 
             }
             
